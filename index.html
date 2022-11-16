@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Tech Newbie Survey Form</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 id="title">Tech Newbie Survey Form</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve the community
+      </p>
+      <form id="survey__form">
+        <label id="name-label">Name</label>
+        <input id="name" type="text" placeholder="John Doe" required />
+        <label id="email-label">Email</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="example@email.com"
+          required
+        />
+        <label id="number-label">Age</label>
+        <input
+          id="number"
+          min="15"
+          max="100"
+          type="number"
+          placeholder="15"
+          required
+        />
+        <label>Which option best describes your current role?</label>
+        <select id="dropdown">
+          <option>Select your current level</option>
+          <option>Newbie</option>
+          <option>Student</option>
+          <option>Developer</option>
+          <option>Advocate</option>
+          <option>Expert</option>
+        </select>
+        <label>Would you recommend Tech Newbie to a friend?</label>
+        <label class="radio__group"
+          >Yes
+          <input type="radio" name="recommend" value="yes" checked="checked" />
+          <span class="checkdot"></span>
+        </label>
+        <label class="radio__group"
+          >No
+          <input type="radio" name="recommend" value="no" />
+          <span class="checkdot"></span>
+        </label>
+        <label class="radio__group"
+          >Not sure
+          <input type="radio" name="recommend" value="no" />
+          <span class="checkdot"></span>
+        </label>
+        
+        <label>What is your favorite feature of Tech Newbie?</label>
+        <select id="dropdown">
+          <option>Select an option</option>
+          <option>Challenges</option>
+          <option>Resources</option>
+          <option>Community</option>
+          <option>Events</option>
+        </select>
+        <label
+          >What would you like to see improved? (Check all that apply)
+        </label>
+        <label class="check__group"
+          >Challenges
+          <input type="checkbox" name="prefer" value="challenges" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="check__group"
+          >Open Source Community
+          <input type="checkbox" name="prefer" value="open_source_community" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="check__group"
+          >Hackathons
+          <input type="checkbox" name="prefer" value="hackathons" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="check__group"
+          >Videos Resources
+          <input type="checkbox" name="prefer" value="video_resources" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="check__group"
+          >City Meetups
+          <input type="checkbox" name="prefer" value="city_meetups" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="check__group"
+          >Mentorship
+          <input type="checkbox" name="prefer" value="mentorship" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="check__group"
+          >Internships and Jobs
+          <input type="checkbox" name="prefer" value="internships_jobs" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="check__group"
+          >Learning circles
+          <input type="checkbox" name="prefer" value="learning_circles" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="check__group"
+          >Other
+          <input type="checkbox" name="prefer" value="other" />
+          <span class="checkmark"></span>
+        </label>
+        <label>Any comments or suggestions?</label>
+        <textarea
+          id="comments"
+          placeholder="Enter your comment here..."
+        ></textarea>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

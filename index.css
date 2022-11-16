@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&family=Oleo+Script&family=Raleway&family=Source+Code+Pro:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("./assets/images/background.png");
+  background-position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  backdrop-filter: blur(2px);
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+#title {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgb(0, 204, 255);
+}
+
+#description {
+  font-family: "raleway", sans-serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  padding: 1rem 0;
+}
+
+#survey__form {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.559);
+  box-shadow: 0 0 10px 0 rgba(168, 190, 206, 0.728);
+  border: none;
+}
+
+label {
+  font-family: "raleway", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+}
+
+input {
+  width: 100%;
+  border: 1px solid white;
+  outline: none;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+#dropdown {
+  width: 100%;
+  font-size: 1.1rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.check__group, .radio__group {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.check__group input, .radio__group input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.check__group input:checked ~ .checkmark, .radio__group input:checked ~ .checkmark {
+    background-color: #21b1f3;
+}
+
+.checkmark {
+  position: absolute;
+  top: 1;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+}
+
+.checkbox {
+    position: absolute;
+    top: 1;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: white;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.check__group input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+/* Style the checkmark */
+  .check__group .checkmark:after {
+    left: 6px;
+    top: 1px;
+    width: 6px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkdot:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio__group input:checked ~ .checkdot:after {
+    display: block;
+}
+
+/* Style the check dot */
+.radio__group .checkdot:after {
+    left: 7px;
+    top: 6px;
+    width: 3px;
+    height: 3px;
+    border: solid white;
+    border-radius: 50%;
+    background: white;
+}
+
+.checkdot {
+    position: absolute;
+    top: 1;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+.radio__group input:checked ~ .checkdot {
+  background-color: #21b1f3;
+}
+
+/* COMMENT BOX */
+#comments {
+  width: 100%;
+  height: 20vh;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: white;
+  color: black;
+}
+
+/* BUTTON */
+#submit {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: rgb(15, 122, 146);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: rgb(7, 82, 97);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+    #description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+  #survey__form {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem auto;
+  }
+  #survey__form {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #survey__form {
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    #dropdown {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 485px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #survey__form {
+    width: 100%;
+    max-width: 350px;
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+    label {
+        font-size: 1rem;
+        letter-spacing: 1.2px;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    #dropdown {
+        font-size: 1rem;
+    }
+
+    .check__group, .radio__group {
+        font-size: 1rem;
+    }
+}
+    
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #survey__form {
+    width: 100%;
+    max-width: 320px;
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+    label {
+        font-size: 1rem;
+        letter-spacing: 1.2px;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    #dropdown {
+        font-size: 1rem;
+    }
+
+    .check__group, .radio__group {
+        font-size: 1rem;
+    }
+}
+    
